@@ -13,8 +13,10 @@ jobs:
           node-version: 18
       - name: Install
         run: npm install
+      - name: Install vite
+        run: npm install vite --save-dev
       - name: Build
-        run: npm run build
+        run: npx vite build
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
